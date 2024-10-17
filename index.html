@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Animated BMI Calculator 💪</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1>💪 BMI Calculator 🌟</h1>
+        <div class="converter">
+            <label for="inchesInput">📏 Inch to cm Converter:</label>
+            <input type="number" id="inchesInput" placeholder="Enter inches">
+            <button onclick="convertInchesToCm()">Convert 🔄</button>
+            <p id="cmOutput" class="animated-text"></p>
+        </div>
+        
+        <form id="bmiForm" class="form animated-form">
+            <label for="name">👤 Your Name:</label>
+            <input type="text" id="name" placeholder="Name" class="input-field">
+
+            <label for="weight">⚖️ Weight:</label>
+            <div class="input-group">
+                <select id="weightUnit" class="select-field">
+                    <option value="kg">kg</option>
+                    <option value="lbs">lbs</option>
+                </select>
+                <input type="number" id="weight" placeholder="Weight" class="input-field">
+            </div>
+
+            <label for="height">📏 Height:</label>
+            <div class="input-group">
+                <select id="heightUnit" class="select-field">
+                    <option value="cm">cm</option>
+                    <option value="feet">feet/inches</option>
+                </select>
+                <div class="height-inputs">
+                    <input type="number" id="heightCm" placeholder="Height in cm" class="input-field">
+                    <input type="number" id="heightFeet" placeholder="Feet" class="input-field" style="display: none;">
+                    <input type="number" id="heightInches" placeholder="Inches" class="input-field" style="display: none;">
+                </div>
+            </div>
+
+            <button type="button" onclick="calculateBMI()" class="calculate-button">Calculate BMI 🚀</button>
+        </form>
+        
+        <div class="result">
+            <h2>🏆 BMI Score:</h2>
+            <p id="bmiScore" class="animated-text"></p>
+            <div id="bmiTip" class="animated-text"></div>
+        </div>
+
+        <div class="guide">
+            <h2>📋 BMI Guide:</h2>
+            <ul>
+                <li><i class="fas fa-arrow-down"></i> BMI less than 18.5: Underweight 🥦</li>
+                <li><i class="fas fa-check-circle"></i> BMI between 18.5 and 24.9: Normal weight 🏃‍♂️</li>
+                <li><i class="fas fa-exclamation-circle"></i> BMI between 25 and 29.9: Overweight 🍔</li>
+                <li><i class="fas fa-times-circle"></i> BMI 30 or higher: Obesity 🍩</li>
+            </ul>
+        </div>
+
+        <footer>
+            🕒 © 2024 BMI Calculator. All rights reserved by Tajul Islam. 🏆
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
